@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
       // Initial Map Zoom
       map_init_zoom: 8,
 
-      // Initial Map Centre (Stonehenge)
+      // Initial Map Centre (Random country)
       map_init_latlng: viewer.country_code_to_bounds().getCenter(),
     },
   });

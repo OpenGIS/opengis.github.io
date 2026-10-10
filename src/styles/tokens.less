@@ -1,0 +1,61 @@
+// Design tokens — shared custom properties and theme mixins.
+// Override the --ogis-* custom properties on :root in any consumer to
+// rebrand without touching the element rules in the other partials.
+
+:root {
+  --ogis-font: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+  --ogis-content-width: 1080px;
+  --ogis-body-size: 15px;
+  --ogis-radius: 6px;
+
+  --ogis-header-bg: #0a120a;
+  --ogis-header-fg: #98a69d;
+  --ogis-header-fg-hover: #0dd70d;
+  --ogis-brand-mark: #ffffff;
+  --ogis-brand-accent: #0dd70d;
+}
+
+.ogis-light-tokens() {
+  --ogis-bg: #fcfaf5;
+  --ogis-bg-alt: #f0f1e6;
+  --ogis-surface: #fffefb;
+  --ogis-fg: #2b3129;
+  --ogis-heading: #18281a;
+  --ogis-muted: #61685b;
+  --ogis-border: #dddccd;
+  --ogis-accent: #0a7d0a;
+  --ogis-accent-hover: #06630a;
+  --ogis-footer-fg: #61685b;
+  --ogis-footer-link: #0a7d0a;
+}
+
+.ogis-dark-tokens() {
+  --ogis-bg: #000b00;
+  --ogis-bg-alt: #001800;
+  --ogis-surface: #001300;
+  --ogis-fg: #eeeeee;
+  --ogis-heading: #e8f5ea;
+  --ogis-muted: #9bb0a3;
+  --ogis-border: #0e3111;
+  --ogis-accent: #0dd70d;
+  --ogis-accent-hover: #5cf05c;
+  --ogis-footer-fg: #8fa295;
+  --ogis-footer-link: #0dd70d;
+}
+
+// Light is the default. Dark follows the OS only while no attribute is set;
+// data-theme="dark"/"light" forces either way.
+:root:not([data-theme="dark"]) {
+  .ogis-light-tokens();
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    .ogis-dark-tokens();
+  }
+}
+
+:root[data-theme="dark"] {
+  .ogis-dark-tokens();
+}

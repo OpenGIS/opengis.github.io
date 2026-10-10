@@ -1,1 +1,3 @@
-[![ogis.org](SCREENSHOT.png)](https://www.ogis.org)
+[![ogis.org (dark)](DARK.png)](https://www.ogis.org)
+
+[![ogis.org (light)](LIGHT.png)](https://www.ogis.org)

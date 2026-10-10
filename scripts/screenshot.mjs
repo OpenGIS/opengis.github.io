@@ -1,16 +1,25 @@
-// Full-page screenshot of the site at 1024px width.
-// Spawns its own Vite dev server on a free port, captures via system Chrome,
-// saves to SCREENSHOT.png, then cleans up.
+// Full-page screenshots of the site at 1024px width.
+// Spawns its own Vite dev server on a free port picked from the ephemeral range
+// (11000-11999) so the standard development port is never disturbed, captures
+// via system Chrome, saves DARK.png (dark theme) then LIGHT.png (light theme),
+// then cleans up.
 import { spawn } from "node:child_process";
+import net from "node:net";
 import { setTimeout as sleep } from "node:timers/promises";
 import { chromium } from "playwright-core";
 
-const OUT_FILE = "SCREENSHOT.png";
+const THEMES = [
+  { name: "dark", file: "DARK.png" },
+  { name: "light", file: "LIGHT.png" },
+];
 const VIEWPORT_WIDTH = 1024;
 const SERVER_START_TIMEOUT_MS = 30_000;
 const PAGE_LOAD_TIMEOUT_MS = 60_000;
+const PORT_RANGE_START = 11000;
+const PORT_RANGE_END = 11999;
 
-const vite = spawn("node_modules/.bin/vite", ["--port", "0"], {
+const port = await findFreePort(PORT_RANGE_START, PORT_RANGE_END);
+const vite = spawn("node_modules/.bin/vite", ["--port", String(port), "--strictPort"], {
   detached: true, // own process group so we can kill the whole tree
   stdio: ["ignore", "pipe", "pipe"],
 });
@@ -26,13 +35,49 @@ try {
       viewport: { width: VIEWPORT_WIDTH, height: 800 },
     });
     await page.goto(url, { waitUntil: "networkidle", timeout: PAGE_LOAD_TIMEOUT_MS });
-    await page.screenshot({ path: OUT_FILE, fullPage: true });
-    console.log(`Saved ${OUT_FILE}`);
+    for (const { name, file } of THEMES) {
+      await page.evaluate(async (theme) => {
+        document.documentElement.setAttribute("data-theme", theme);
+        await new Promise((resolve) =>
+          requestAnimationFrame(() => requestAnimationFrame(resolve)),
+        );
+      }, name);
+      await page.screenshot({ path: file, fullPage: true });
+      console.log(`Saved ${file}`);
+    }
   } finally {
     await browser.close();
   }
 } finally {
   stopVite(vite);
+}
+
+/**
+ * Picks the first free TCP port in the inclusive range [start, end].
+ * Probes each port by attempting to listen; EADDRINUSE means it is taken.
+ * @param {number} start
+ * @param {number} end
+ * @returns {Promise<number>}
+ */
+function findFreePort(start, end) {
+  return new Promise((resolve, reject) => {
+    const tryPort = (candidate) => {
+      if (candidate > end) {
+        reject(new Error(`No free port in range ${start}-${end}`));
+        return;
+      }
+      const probe = net.createServer();
+      probe.unref();
+      probe.once("error", (err) => {
+        if (err.code === "EADDRINUSE") tryPort(candidate + 1);
+        else reject(err);
+      });
+      probe.listen(candidate, () => {
+        probe.close(() => resolve(candidate));
+      });
+    };
+    tryPort(start);
+  });
 }
 
 /**

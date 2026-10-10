@@ -31,7 +31,7 @@
                   src="./assets/img/earth-icon.svg"
                   width="30px"
                   height="30px"
-                  alt="O"
+                  alt="Open GIS"
                 />
               </td>
               <td>G</td>
@@ -51,6 +51,7 @@
           <a href="https://ogis.app/#map=7/49.853110/-125.616338/31/57"
             ><img
               src="https://raw.githubusercontent.com/OpenGIS/outdoors/master/screenshots/vancouver-island.jpg"
+              alt="Aerial Map of Vancouver Island and the Salish Sea shown in ogis.app"
           /></a>
 
           <p>
@@ -80,7 +81,7 @@
             both for fun and for work since 1997. I run an eBay advertising
             service called
             <a href="https://www.auctionnudge.com/">Auction Nudge</a> and
-            contribute to Open-Source software. Currently the former pays for
+            contribute to Open-Source projects. Currently the former pays for
             the latter.
           </p>
 
@@ -111,12 +112,6 @@
               <a href="#ogis-app">[2025] ogis.app</a>
             </li>
             <li>
-              <a href="#waymark-js">[2024] Waymark JS</a>
-            </li>
-            <li>
-              <a href="#map-first">[2024] Map First</a>
-            </li>
-            <li>
               <a href="#inreach-mapshare">[2022] inReach MapShare</a>
             </li>
             <li>
@@ -124,6 +119,14 @@
             </li>
             <li>
               <a href="#waymark-wp">[2019] Waymark for WordPress</a>
+              <ul>
+                <li>
+                  <a href="#waymark-js">[2024] Waymark JS v1</a>
+                </li>
+                <li>
+                  <a href="#map-first">[2024] Map First</a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href="#cumberlandtrails">[2012] Cumberland Trails</a>
@@ -143,10 +146,11 @@
                   class="right"
                   src="./assets/img/home/ogis-app-screenshot.jpg"
                   width="360px"
+                  alt="Screenshot of the ogis.app Map Editor showing an open Marker popup over a forest Map"
                 />
 
                 <p class="lead">
-                  Rich web-based map editor built with Waymark JS.
+                  Rich web-based Map Editor built with Waymark JS v1.
                 </p>
 
                 <section class="metadata">
@@ -157,7 +161,7 @@
                     </li>
                     <li>
                       <b>Core Technologies:</b>
-                      <span>Vue JS, Waymark JS</span>
+                      <span>Vue.js, Waymark JS v1</span>
                     </li>
                     <li>
                       <b>Current Status:</b>
@@ -172,7 +176,7 @@
                   The Open
                   <abbr title="Geographic Information System">GIS</abbr>
                   App is a full-featured web-based Map Editor that uses Waymark
-                  JS to create and edit Maps. It runs in the browser and allows
+                  JS v1 to create and edit Maps. It runs in the browser and allows
                   users to create and share Maps without needing to install any
                   software.
                 </p>
@@ -191,17 +195,244 @@
             </article>
             <!-- END ogis.app -->
 
-            <!-- START Waymark JS -->
-            <article id="waymark-js">
+            <!-- START inReach MapShare -->
+            <article id="inreach-mapshare">
               <header>
                 <h1>
-                  <a href="https://www.ogis.org/waymark-js/">Waymark JS</a>
+                  <a href="https://github.com/OpenGIS/Inreach-Mapshare"
+                    >inReach MapShare</a
+                  >
+                </h1>
+
+                <img
+                  class="right"
+                  src="https://raw.githubusercontent.com/opengis/inreach-mapshare/master/src/img/screenshot-1.png"
+                  width="360px"
+                  alt="Screenshot of the inReach MapShare map showing a route and a message popup"
+                />
+
+                <p class="lead">
+                  A better way to share your Garmin inReach location on the web.
+                </p>
+
+                <section class="metadata">
+                  <ul>
+                    <li>
+                      <b>First Version:</b>
+                      <span>August 2022</span>
+                    </li>
+                    <li>
+                      <b>Core Technologies:</b>
+                      <span>PHP, WordPress, Garmin API Integration</span>
+                    </li>
+                    <li>
+                      <b>Current Status:</b>
+                      <span>Active, v3</span>
+                    </li>
+                  </ul>
+                </section>
+              </header>
+
+              <main>
+                <p>
+                  A WordPress plugin to display your live Garmin inReach data.
+                  These satellite communication devices are used for outdoor
+                  activities, especially in remote areas where cellular coverage
+                  is not available.
+                </p>
+
+                <p>
+                  The plugin allows users to embed a map on their website,
+                  showing the current location and route of their inReach
+                  device. The map is responsive, so it works on both desktop and
+                  mobile devices and has a number of customisation options.
+                </p>
+
+                <p>
+                  It also enables WordPress users to automatically share
+                  their location with friends and family from anywhere in the
+                  world. While Garmin has its own tools for this, the plugin
+                  makes the process much simpler.
+                </p>
+
+                <p>
+                  I use this plugin myself to share my location on bikepacking
+                  trips, often in remote areas.
+                </p>
+              </main>
+
+              <footer>
+                <a href="https://www.morehawes.ca/trips/arizona-2024/"
+                  >Arizona 2024 Trip</a
+                >
+                |
+                <a href="https://github.com/OpenGIS/Inreach-Mapshare">GitHub</a>
+              </footer>
+            </article>
+            <!-- END inReach MapShare -->
+
+            <!-- START Comox Valley Trails -->
+            <article id="cvtrails">
+              <header>
+                <h1>Comox Valley Trails</h1>
+
+                <img
+                  class="right"
+                  src="./assets/img/home/comox-valley-trails.jpg"
+                  width="360px"
+                  alt="Screenshot of the Comox Valley Trails app showing trails around Seal Bay Regional Nature Park"
+                />
+
+                <p class="lead">
+                  Providing free trail maps based on OpenStreetMap data.
+                </p>
+
+                <section class="metadata">
+                  <ul>
+                    <li>
+                      <b>First Version:</b>
+                      <span>February 2020</span>
+                    </li>
+                    <li>
+                      <b>Core Technologies:</b>
+                      <span>Native iPhone/Android apps, Leaflet, Cordova</span>
+                    </li>
+                    <li>
+                      <b>Current Status:</b>
+                      <span>No longer available</span>
+                    </li>
+                  </ul>
+                </section>
+              </header>
+
+              <main>
+                <p>
+                  A mobile app with offline trail maps of the Comox Valley
+                  region in British Columbia, Canada. Available in the browser,
+                  or as Apple and Android apps.
+                </p>
+
+                <p>
+                  The app was designed to be simple and only included one button
+                  &ndash; "locate", which uses your device's GPS to display your
+                  current location (and which way you are facing). This is
+                  especially useful when navigating trails in terrain without
+                  cellular service.
+                </p>
+
+                <p>
+                  This project taught me a lot about distributing topographical
+                  maps using web technologies, and about the importance of
+                  simplicity where there is no signal.
+                </p>
+              </main>
+            </article>
+            <!-- END Comox Valley Trails -->
+
+            <!-- START Waymark -->
+            <article id="waymark-wp">
+              <header>
+                <h1>
+                  <a href="https://wordpress.org/plugins/waymark/"
+                    >Waymark for WordPress</a
+                  >
+                </h1>
+
+                <img
+                  class="right"
+                  src="https://www.morehawes.ca/assets/images/home/waymark.jpg"
+                  width="360px"
+                  alt="Screenshot of the Waymark for WordPress plugin showing a running route on an interactive Map"
+                />
+
+                <p class="lead">
+                  A WordPress plugin to easily create, edit and share meaningful
+                  Maps.
+                </p>
+
+                <section class="metadata">
+                  <ul>
+                    <li><b>First Version:</b> August 2019</li>
+                    <li><b>Core Technologies:</b> PHP, JavaScript, Leaflet</li>
+                    <li><b>Current Status:</b> Active, v1.5</li>
+                  </ul>
+                </section>
+              </header>
+
+              <main>
+                <p>
+                  My goal with Waymark was to learn how to create and support a
+                  popular Open-Source project that makes creating Maps
+                  intuitive and easy.
+                </p>
+
+                <p>
+                  WordPress is the most popular Content Management System (CMS)
+                  in the world and currently powers over 43% of
+                  <b>all</b> websites. It is also Open-Source and has an
+                  established community.
+                </p>
+
+                <p>
+                  Using the
+                  <a href="https://leafletjs.com/">Leaflet</a> library, the
+                  plugin allows users to create and edit Maps. Users can add
+                  Overlays (Markers, Lines & Shapes) to their Maps and style
+                  them using Types. Waymark uses
+                  <a href="https://www.openstreetmap.org/">OpenStreetMap</a> as
+                  the default Basemap. The plugin is pinned to
+                  <a href="#waymark-js">Waymark JS v1</a>.
+                </p>
+
+                <p>
+                  The plugin has a loyal user base and all sorts of use cases
+                  (from dog walks to transport maps).
+                </p>
+
+                <p>
+                  Waymark has been made better by user contributions
+                  (feedback/ideas/code/<a
+                    href="https://translate.wordpress.org/projects/wp-plugins/waymark/"
+                    >translations</a
+                  >) and is currently <em>officially</em> available in the
+                  following languages in addition to English:
+                </p>
+
+                <ul>
+                  <li>Dutch</li>
+                  <li>Spanish (Spain & Chile)</li>
+                  <li>Croatian</li>
+                  <li>German</li>
+                  <li>Italian</li>
+                  <li>Galician</li>
+                </ul>
+
+                <p>
+                  Thanks to the WordPress translation community, Waymark is
+                  becoming more accessible.
+                </p>
+              </main>
+
+              <footer>
+                <a href="https://www.ogis.org/waymark-wp/">Demo &amp; Docs</a>
+                |
+                <a href="https://github.com/OpenGIS/waymark">GitHub</a>
+              </footer>
+            </article>
+            <!-- END Waymark -->
+
+            <!-- START Waymark JS -->
+            <article id="waymark-js" class="child">
+              <header>
+                <h1>
+                  <a href="https://www.ogis.org/waymark-js/">Waymark JS v1</a>
                 </h1>
 
                 <img
                   class="right"
                   src="./assets/img/home/waymark-js-editor.jpg"
                   width="360px"
+                  alt="Screenshot of the Waymark JS Editor showing a Marker popup with an image and description"
                 />
 
                 <p class="lead">
@@ -211,7 +442,7 @@
                 <section class="metadata">
                   <ul>
                     <li><b>First Version:</b> January 2024</li>
-                    <li><b>Core Technologies:</b> JavaScript, Leaflet JS</li>
+                    <li><b>Core Technologies:</b> JavaScript, Leaflet</li>
                     <li>
                       <b>Current Status:</b>
                       <span>Active, v1.2</span>
@@ -248,7 +479,7 @@
                 </ul>
 
                 <p>
-                  No account or API key is required to use the Editor and Maps
+                  No account or API key is required to use the Editor, and Maps
                   are stored in your browser's local storage.
                 </p>
               </main>
@@ -262,7 +493,7 @@
             <!-- END Waymark JS -->
 
             <!-- START Map First -->
-            <article id="map-first">
+            <article id="map-first" class="child">
               <header>
                 <h1>
                   <a href="https://github.com/OpenGIS/Map-First">Map First</a>
@@ -272,6 +503,7 @@
                   class="right"
                   src="https://raw.githubusercontent.com/OpenGIS/Map-First/master/screenshot.png"
                   width="360px"
+                  alt="Screenshot of the Map First WordPress theme showing a Yosemite hiking Map and elevation profile"
                 />
 
                 <p class="lead">
@@ -290,7 +522,7 @@
                     </li>
                     <li>
                       <b>Current Status:</b>
-                      <span>Active, v1.0</span>
+                      <span>Archived</span>
                     </li>
                   </ul>
                 </section>
@@ -301,7 +533,7 @@
                   Designed for use with Waymark, Map First is a minimal
                   WordPress theme that demonstrates many of Waymark's features.
                   View the source code to see comments that explain how the
-                  theme works, or use it to start building a custom Geographical
+                  theme works, or use it to start building a custom Geographic
                   Information System (GIS) powered by WordPress.
                 </p>
               </main>
@@ -312,229 +544,6 @@
             </article>
             <!-- END Map First -->
 
-            <!-- START inReach MapShare -->
-            <article id="inreach-mapshare">
-              <header>
-                <h1>
-                  <a href="https://github.com/OpenGIS/Inreach-Mapshare"
-                    >inReach MapShare</a
-                  >
-                </h1>
-
-                <img
-                  class="right"
-                  src="https://raw.githubusercontent.com/opengis/inreach-mapshare/master/src/img/screenshot-1.png"
-                  width="360px"
-                />
-
-                <p class="lead">
-                  A better way to share your Garmin inReach location on the web.
-                </p>
-
-                <section class="metadata">
-                  <ul>
-                    <li>
-                      <b>First Version:</b>
-                      <span>August 2022</span>
-                    </li>
-                    <li>
-                      <b>Core Technologies:</b>
-                      <span>PHP, WordPress, Garmin API Integration</span>
-                    </li>
-                    <li>
-                      <b>Current Status:</b>
-                      <span>Active, v3</span>
-                    </li>
-                  </ul>
-                </section>
-              </header>
-
-              <main>
-                <p>
-                  A WordPress plugin to display your live Garmin inReach data.
-                  These satellite communication devices are used for outdoor
-                  activities, especially in remote areas where cellular coverage
-                  is not available.
-                </p>
-
-                <p>
-                  The plugin allows users to embed a Map on their website,
-                  showing the current location and route of their inReach
-                  device. The Map is responsive, so it works on both desktop and
-                  mobile devices and has a number of customisation options.
-                </p>
-
-                <p>
-                  The plugin enables WordPress users to automatically share
-                  their location with friends and family from anywhere in the
-                  world. While Garmin has its own tools for this, this plugin
-                  makes the process much simpler.
-                </p>
-
-                <p>
-                  I use this plugin myself to share my location on bikepacking
-                  trips, often in remote areas.
-                </p>
-              </main>
-
-              <footer>
-                <a href="https://www.morehawes.ca/trips/arizona-2024/"
-                  >Arizona 2024 Trip</a
-                >
-                |
-                <a href="https://github.com/OpenGIS/Inreach-Mapshare">GitHub</a>
-              </footer>
-            </article>
-            <!-- END inReach MapShare -->
-
-            <!-- START Comox Valley Trails -->
-            <article id="cvtrails">
-              <header>
-                <h1>Comox Valley Trails</h1>
-
-                <img
-                  class="right"
-                  src="./assets/img/home/comox-valley-trails.jpg"
-                  width="360px"
-                />
-
-                <p class="lead">
-                  Providing free trail maps based on OpenStreetMap data.
-                </p>
-
-                <section class="metadata">
-                  <ul>
-                    <li>
-                      <b>First Version:</b>
-                      <span>February 2020</span>
-                    </li>
-                    <li>
-                      <b>Core Technologies:</b>
-                      <span>Native iPhone/Android apps, Leaflet, Cordova</span>
-                    </li>
-                    <li>
-                      <b>Current Status:</b>
-                      <span>No longer available</span>
-                    </li>
-                  </ul>
-                </section>
-              </header>
-
-              <main>
-                <p>
-                  A mobile app providing offline trail Maps of the Comox Valley
-                  region in British Columbia, Canada. Available through the
-                  browser or through the Apple and Android app stores for
-                  offline use.
-                </p>
-
-                <p>
-                  The app was designed to be simple and only included one button
-                  &ndash; "locate", which uses your device's GPS to display your
-                  current location (and which way you are facing). This is
-                  especially useful when navigating trails in terrain without
-                  cellular service.
-                </p>
-
-                <p>
-                  This project taught me a lot about distributing topographical
-                  maps using web technologies, as well as the logistics of
-                  hosting apps through app stores.
-                </p>
-              </main>
-            </article>
-            <!-- END Comox Valley Trails -->
-
-            <!-- START Waymark -->
-            <article id="waymark-wp">
-              <header>
-                <h1>
-                  <a href="https://wordpress.org/plugins/waymark/"
-                    >Waymark for WordPress</a
-                  >
-                </h1>
-
-                <img
-                  class="right"
-                  src="https://www.morehawes.ca/assets/images/home/waymark.jpg"
-                  width="360px"
-                />
-
-                <p class="lead">
-                  A WordPress plugin to easily create, edit and share meaningful
-                  Maps.
-                </p>
-
-                <section class="metadata">
-                  <ul>
-                    <li><b>First Version:</b> August 2019</li>
-                    <li><b>Core Technologies:</b> PHP, JavaScript, Leaflet</li>
-                    <li><b>Current Status:</b> Active, v1.5</li>
-                  </ul>
-                </section>
-              </header>
-
-              <main>
-                <p>
-                  My goal with Waymark was to learn how to create and support a
-                  popular Open-Source project that makes the experience of
-                  creating Maps an intuitive and easy one.
-                </p>
-
-                <p>
-                  WordPress is the most popular Content Management System (CMS)
-                  in the world and currently powers over 43% of
-                  <b>all</b> websites. It is also Open-Source and has an
-                  established community.
-                </p>
-
-                <p>
-                  Using the popular
-                  <a href="https://leafletjs.com/">Leaflet</a> library, the
-                  plugin allows users to create and edit Maps with an intuitive
-                  interface. Users can add Overlays (Markers, Lines & Shapes) to
-                  their Maps and style them using Types. Waymark uses
-                  <a href="https://www.openstreetmap.org/">OpenStreetMap</a> as
-                  the default Basemap.
-                </p>
-
-                <p>
-                  The plugin has a loyal userbase and all sorts of use-cases
-                  (from dog walks to transport maps).
-                </p>
-
-                <p>
-                  The plugin has been made better by user contributions
-                  (feedback/ideas/code/<a
-                    href="https://translate.wordpress.org/projects/wp-plugins/waymark/"
-                    >translations</a
-                  >) and is currently <em>officially</em> available in the
-                  following languages in addition to English:
-                </p>
-
-                <ul>
-                  <li>Dutch</li>
-                  <li>Spanish (Spain & Chile)</li>
-                  <li>Croatian</li>
-                  <li>German</li>
-                  <li>Italian</li>
-                  <li>Galician</li>
-                </ul>
-
-                <p>
-                  Thanks to the WordPress translation community, Waymark is
-                  becoming more accessible to users around the world.
-                </p>
-              </main>
-
-              <footer>
-                <a href="https://www.ogis.org/waymark-wp/">Demo &amp; Docs</a>
-                |
-                <a href="https://github.com/OpenGIS/waymark">GitHub</a>
-              </footer>
-            </article>
-            <!-- END Waymark -->
-
             <!-- START Cumberland Trails -->
             <article id="cumberlandtrails">
               <header>
@@ -544,10 +553,11 @@
                   class="right"
                   src="./assets/img/home/cumberland-trails.jpg"
                   width="360px"
+                  alt="Screenshot of the Cumberland Trails map showing named mountain bike trails on terrain"
                 />
 
                 <p class="lead">
-                  A web-based Map of the trails in the Cumberland region of
+                  A web-based map of the trails in the Cumberland region of
                   British Columbia, Canada.
                 </p>
 
@@ -565,8 +575,8 @@
               <main>
                 <p>
                   For this project I personally recorded GPS tracks of trails
-                  (by running and riding them), overlaying them on top of
-                  OpenStreetMap data to create a detailed map of the area.
+                  (by running and riding them) and overlaid them on
+                  OpenStreetMap data.
                 </p>
 
                 <p>
@@ -594,10 +604,11 @@
                   class="right"
                   src="./assets/img/home/bighikesyosemite.png"
                   width="360px"
+                  alt="Screenshot of the Big Hikes Yosemite app showing Half Dome hike details and a trail map"
                 />
 
                 <p class="lead">
-                  A web-based Map of the Big Hikes in Yosemite National Park.
+                  A web-based map of the Big Hikes in Yosemite National Park.
                 </p>
 
                 <section class="metadata">
@@ -611,23 +622,23 @@
 
               <main>
                 <p>
-                  Big Hikes Yosemite was a free app which contained information
-                  about four strenuous day hikes in the Yosemite Valley area of
-                  Yosemite National Park (California, United States).
+                  Big Hikes Yosemite was a free app with information
+                  about four strenuous day hikes in the Yosemite Valley area
+                  (California, United States).
                 </p>
 
                 <p>
                   It contained detailed trail descriptions, original
-                  photographs, trail maps and trailhead information which I
-                  researched and created myself. The map itself I created
+                  photographs, trail maps and trailhead information, all of
+                  which I researched and created myself. The map itself I made
                   offline using Ortelius (now defunct), combining my own GPX
                   with existing public data.
                 </p>
 
                 <p>
                   This was my first foray into both native mobile app
-                  development and map creation. I learned a lot about the
-                  process of creating and distributing apps through app stores.
+                  development and map creation. I learned a great deal about
+                  creating and distributing apps through app stores.
                 </p>
               </main>
             </article>
